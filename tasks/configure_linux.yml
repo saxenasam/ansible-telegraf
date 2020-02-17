@@ -36,4 +36,3 @@
     state: started
     enabled: yes
   become: yes
-  when: not telegraf_agent_docker
