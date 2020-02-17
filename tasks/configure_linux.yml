@@ -25,7 +25,6 @@
   become: yes
   notify:
     - Restart Telegraf
-    - Restart Telegraf container
 
 - name: "Force restart service after reread config"
   meta: flush_handlers
