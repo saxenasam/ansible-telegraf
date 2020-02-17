@@ -6,12 +6,6 @@
   when:
     - telegraf_agent_aws_tags
 
-- name: "Add prefix path"
-  set_fact:
-    telegraf_agent_config_path: /usr/local/etc
-  when:
-    - ansible_os_family == "FreeBSD"
-
 - name: Retrieve all ec2 tags on the instance
   ec2_tag:
     region: '{{ ansible_ec2_placement_region }}'
